@@ -1,0 +1,23 @@
+# Visual Studio / .NET
+bin/
+obj/
+*.user
+*.suo
+*.vs/
+*.vscode/
+
+# Entity Framework migrations (optional to track or ignore)
+Migrations/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# MySQL Docker volume (optional, if you don’t want DB data in git)
+mysql-data/
+
+# Logs
+*.log
+
+# Publish / build output
+wwwroot/
