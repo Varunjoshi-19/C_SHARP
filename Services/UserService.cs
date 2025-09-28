@@ -1,5 +1,5 @@
+using testingApplication.DTOs;
 using testingApplication.Interface;
-using testingApplication.Models;
 
 namespace testingApplication.Services
 {
@@ -11,18 +11,12 @@ namespace testingApplication.Services
         {
             _userRepository = userRepository;
 
+
         }
 
         public void RegisterUser(UserDto userDto)
         {
-            var User = new UserDto
-            {
-                Username = userDto.Username,
-                Email = userDto.Email,
-                Password = userDto.Password
-            };
-
-            _userRepository.AddUser(User);
+            _userRepository.AddUser(userDto);
         }
 
     }

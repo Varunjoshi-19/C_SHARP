@@ -25,6 +25,15 @@ public class RouteController : Controller
 
     }
 
+    public ActionResult Dashboard()
+    {
+        return View("~/Views/Home/Dashboard.cshtml");
+    }
+
+      public ActionResult CreateBlog() {
+        return View("~/Views/Home/CreateBlog.cshtml");
+      }
+
     public ActionResult Register()
     {
 

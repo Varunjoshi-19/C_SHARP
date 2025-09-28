@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using testingApplication.DTOs;
 using testingApplication.Interface;
-using testingApplication.Models;
 
 namespace testingApplication.Controllers
 {
@@ -18,7 +18,8 @@ namespace testingApplication.Controllers
         [HttpPost]
         public IActionResult Register([FromBody] UserDto userDto)
         {
-            Console.WriteLine(userDto);
+
+            
 
             _userService.RegisterUser(userDto);
             return Ok("User registered successfully!");

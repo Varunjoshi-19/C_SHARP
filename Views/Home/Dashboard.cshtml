@@ -1,0 +1,154 @@
+@page
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="@Url.Content("~/js/dashboard.js")"></script>
+    <link rel="stylesheet" href="@Url.Content("~/css/dashboard.css")">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="" class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/009933/leaf.png" alt="logo" />
+            Blog Application
+        </a>
+        <div class="nav-links">
+            <a id="home" href="/Route" class="active">Home</a>
+            <a id="dashboard" href="/Route/Dashboard">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+
+
+        <section class="banner">
+            <h1>Welcome to Blog Application</h1>
+            <p>Discover amazing stories, insights, and ideas from our community of writers.
+                Explore topics that matter to you and join the conversation.</p>
+        </section>
+
+
+        <header>
+            <div>
+                <h1>Blog Dashboard</h1>
+                <p>Manage your blog posts</p>
+            </div>
+            <button href="/Route/CreateBlog" class="btn green" id="newBlogBtn">+ New Blog Post</button>
+        </header>
+        <div class="search-filter-row">
+            <input type="text" id="searchInput" class="search" placeholder="Search blogs...">
+            <div class="filters">
+                <select id="categoriesFilter">
+                    <option>All Categories</option>
+                    <option>Technology</option>
+                    <option>Lifestyle</option>
+                    <option>Travel</option>
+                    <option>Food</option>
+                </select>
+                <select id="statusFilter">
+                    <option>All Status</option>
+                    <option>Draft</option>
+                    <option>Published</option>
+                </select>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <span class="tag tech">Technology</span>
+                <h3>Getting Started with React Development</h3>
+                <p>React is a powerful JavaScript library for building user interfaces. In this comprehensive guide, we
+                    will explore the fundamentals of React developm...</p>
+                <div class="card-meta">
+                    <span><i class="fa fa-user"></i> John Doe</span>
+                    <span><i class="fa fa-calendar"></i> 2024-01-15</span>
+                    <span><i class="fa fa-clock-o"></i> 5 min read</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <span class="tag life">Lifestyle</span>
+                <h3>The Art of Minimalist Living</h3>
+                <p>Minimalism is more than just decluttering your space; it is a lifestyle philosophy that emphasizes
+                    living with intention and focusing on what truly ma...</p>
+                <div class="card-meta">
+                    <span><i class="fa fa-user"></i> Jane Smith</span>
+                    <span><i class="fa fa-calendar"></i> 2024-01-12</span>
+                    <span><i class="fa fa-clock-o"></i> 4 min read</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <span class="tag travel">Travel</span>
+                <h3>Exploring Hidden Gems in Southeast Asia</h3>
+                <p>Southeast Asia is home to some of the world most breathtaking and undiscovered destinations. From
+                    pristine beaches to ancient temples, this region off...</p>
+                <div class="card-meta">
+                    <span><i class="fa fa-user"></i> Mike Johnson</span>
+                    <span><i class="fa fa-calendar"></i> 2024-01-10</span>
+                    <span><i class="fa fa-clock-o"></i> 7 min read</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <span class="tag tech draft">Technology</span>
+                <h3>The Future of Sustainable Technology</h3>
+                <p>As we face growing environmental challenges, sustainable technology becomes increasingly important...
+                </p>
+                <div class="card-meta draftMeta">
+                    <span class="draft-label">Draft</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <span class="tag food">Food</span>
+                <h3>Mastering the Art of Coffee Brewing</h3>
+                <p>Coffee is more than just a morning beverage; it is an art form that combines science, technique, and
+                    passion...</p>
+                <div class="card-meta">
+                    <span><i class="fa fa-user"></i> Laura White</span>
+                    <span><i class="fa fa-calendar"></i> 2024-01-09</span>
+                    <span><i class="fa fa-clock-o"></i> 6 min read</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

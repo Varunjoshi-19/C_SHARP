@@ -1,4 +1,5 @@
 using testingApplication.Data;
+using testingApplication.DTOs;
 using testingApplication.Interface;
 using testingApplication.Models;
 
@@ -15,16 +16,24 @@ namespace testingApplication.Repositories
 
         }
 
-        public void AddUser(UserDto user)
+        public void AddUser(UserDto userDto)
         {
-            _context.Users.Add(user);
+            var user = new UserModel
+            {
+                Id = Guid.NewGuid(),
+                Username = userDto.Username,
+                Email = userDto.Email,
+                Password = userDto.Password,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow
+            };
+
+
+            _context.Add(user);
             _context.SaveChanges();
         }
 
-        public UserDto? GetUserByEmail(string email)
-        {
-            return _context.Users.FirstOrDefault(u => u.Email == email);
-        }
+
     }
 
 

@@ -1,7 +1,103 @@
-﻿@page 
+﻿@page
 @{
-
 }
 
 
-<h1>This the home page</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="@Url.Content("~/js/home.js")"></script>
+    <link rel="stylesheet" href="@Url.Content("~/css/home.css")">
+</head>
+
+<body>
+
+
+
+    @* TOP REUSEABLE SECTION   *@
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/009933/leaf.png" alt="logo" />
+            Blog Application
+        </a>
+        <div class="nav-links">
+            <a id="home" href="/Route" class="active">Home</a>
+            <a id="dashboard" href="/Route/Dashboard">Dashboard</a>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <h1>Welcome to Blog Application</h1>
+        <p>Discover amazing stories, insights, and ideas from our community of writers.
+            Explore topics that matter to you and join the conversation.</p>
+    </section>
+
+
+    @* TOP REUSEABLE SECTION   *@
+
+    <div class="filters">
+        <div class="search-box">
+            🔍 <input type="text" placeholder="Search articles...">
+        </div>
+        <div class="category-dropdown">
+            <button class="dropdown-btn">All Categories</button>
+            <ul class="dropdown-menu">
+                <li>Technology</li>
+                <li>Lifestyle</li>
+                <li>Travel</li>
+                <li>Food</li>
+                <li>Health</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="blog-grid">
+        <div class="blog-card">
+            <span class="tag">Technology</span>
+            <h3>Getting Started with React Development</h3>
+            <p>React is a powerful JavaScript library for building user interfaces. In this guide, we will explore the
+                fundamentals...</p>
+            <div class="blog-meta">👤 John Doe 📅 2024-01-15 ⏱ 5 min read</div>
+        </div>
+
+        <div class="blog-card">
+            <span class="tag">Lifestyle</span>
+            <h3>The Art of Minimalist Living</h3>
+            <p>Minimalism is more than just decluttering your space; it's a lifestyle philosophy that emphasizes living
+                with intention...</p>
+            <div class="blog-meta">👤 Jane Smith 📅 2024-01-12 ⏱ 4 min read</div>
+        </div>
+
+        <div class="blog-card">
+            <span class="tag">Travel</span>
+            <h3>Exploring Hidden Gems in Southeast Asia</h3>
+            <p>Southeast Asia is home to breathtaking and undiscovered destinations. From pristine beaches to ancient
+                temples...</p>
+            <div class="blog-meta">👤 Mike Johnson 📅 2024-01-10 ⏱ 7 min read</div>
+        </div>
+
+        <div class="blog-card">
+            <span class="tag">Food</span>
+            <h3>Mastering the Art of Coffee Brewing</h3>
+            <p>Coffee is more than just a morning beverage; it’s a ritual. Learn the techniques to brew the perfect cup
+                every time...</p>
+            <div class="blog-meta">👤 Sarah Lee 📅 2024-01-08 ⏱ 6 min read</div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

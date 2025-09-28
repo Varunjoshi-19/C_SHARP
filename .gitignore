@@ -20,4 +20,4 @@ mysql-data/
 *.log
 
 # Publish / build output
-wwwroot/
+# wwwroot/

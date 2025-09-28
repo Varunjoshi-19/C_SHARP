@@ -1,4 +1,4 @@
-using testingApplication.Models;
+using testingApplication.DTOs;
 
 namespace testingApplication.Interface
 {

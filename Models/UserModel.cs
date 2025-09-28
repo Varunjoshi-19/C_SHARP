@@ -1,25 +1,33 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
 
 namespace testingApplication.Models
 {
 
-    public class UserDto
+  [Table("users")]
+    public class UserModel
     {
-
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
-        [JsonPropertyName("username")]
+        [Required]
         public required string Username { get; set; }
 
-        [JsonPropertyName("email")]
-         public required string Email { get; set; }
-
-        [JsonPropertyName("password")]
+        [Required]
         public required string Password { get; set; }
+
+        [Required]
+        public required string Email { get; set; }
+
+        [Required]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [Required]
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+
+        public ICollection<BlogModel> Blogs { get; set; } = new List<BlogModel>();
+
 
 
     }
